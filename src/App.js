@@ -1,6 +1,8 @@
 import {Container, Nav } from 'react-bootstrap';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import BasicForm from './components/BasicForm';
+import Users from './components/Users';
+import UserForm from './components/UserForm';
 
 function Home() {
   return <h2>React bootstrap app</h2>
@@ -16,11 +18,16 @@ function App() {
           <Nav.Item>
             <Nav.Link href="/basicform">Form Basico</Nav.Link>
           </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/users">Axios ejemplo - USERS</Nav.Link>
+          </Nav.Item>
         </Nav>
         </Container>
         <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/basicform' element={<BasicForm/>}/>
+        <Route path='/users' element={<Users/>}/>
+        <Route path='/adduser' element={<UserForm/>}/>
         </Routes>      
     </Router>
   );
