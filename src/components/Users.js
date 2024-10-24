@@ -5,7 +5,7 @@ import { Button, Container, Spinner, Table } from "react-bootstrap";
 function Users() {
     const [users, setUsers] = useState(null)
     const [loading, setLoading] = useState(true)
-
+ 
     useEffect(() => {
         axios.get("https://jsonplaceholder.typicode.com/users")
             .then((response) => {
@@ -20,6 +20,7 @@ function Users() {
                 <td>{user.email}</td>
                 <td>{user.username}</td>
                 <td>{user.address.street}-{user.address.suite}-{user.address.city}</td>
+                <td><Button href={'/edituser?id=' + user.id}>Editar</Button></td>
             </tr>
         )
         return <tbody>{content}</tbody>

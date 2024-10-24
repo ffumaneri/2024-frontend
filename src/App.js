@@ -28,6 +28,7 @@ function App() {
         <Route path='/basicform' element={<BasicForm/>}/>
         <Route path='/users' element={<Users/>}/>
         <Route path='/adduser' element={<UserForm/>}/>
+        <Route path='/edituser' element={<UserForm/>}/>
         </Routes>      
     </Router>
   );
